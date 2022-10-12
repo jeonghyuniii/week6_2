@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>birthday</title>
+    <style type="text/css">
+        body{background-color: #000000;}
+
+        h1{font-family: 'NanumBarunpen';
+           font-size: 80px;
+           color: #FFFFFF;
+           text-align: center;}
+
+        div{
+            text-align: center;
+            margin: auto;
+        }
+        #yes{
+            font-family: 'NanumBarunpen';
+            color: #000000;
+            font-size: 35px;
+            padding: 25px 35px 30px 30px;
+            margin: 20px;
+            border: 0px;
+            border-radius: 40%;
+            background-color: #FFFFFF;
+        }
+          #no{
+            font-family: 'NanumBarunpen';
+            color: #000000;
+            font-size: 35px;
+            padding: 25px 35px 30px 30px;
+            margin: 20px;
+            border: 0px;
+            border-radius: 40%;
+            background-color: #FFFFFF;
+        }
+      
+           
+        #vert {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+          #vert2{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            right: 30%;
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+         
+        }
+
+
+        .button {
+            text-align: center;
+            font-family: 'NanumBarunpen';
+
+        }
+      @font-face {
+        font-family: 'NanumBarunpen';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>당신은 행복하신가요?</h1>
+    
+   <div id="imgDiv">
+   
+    <div id = "vert">
+            <button id = "yes" >예</button></div>
+    <div id = "vert2">
+            <button id = "no" onclick="makeImg()">아니요</button></div>
+        
+    </div>
+        
+
+       <script type="text/javascript">
+        function makeImg(){
+         
+         //버튼 지워주는 코드
+         var _div = document.getElementById("imgDiv");
+         _div.removeChild(document.getElementById("vert"));
+         _div.removeChild(document.getElementById("vert2"));
+         
+         for(var i=0;i<5;i++){
+            img = document.createElement("img");
+         img.id=i;
+         img.src="clover.png";
+         img.width="150";
+         img.height="150";
+         img.style="margin:20px;";
+         //실제로 사진 붙여주는 코드
+         _div.appendChild(img);         
+         }
+      
+        }
+
+     
+    </script>
+</body>
+</html>
+
+
+
+
+
+
